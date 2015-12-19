@@ -1,0 +1,10 @@
+.DS_Store
+
+# VIM Backup Files
+*.swp
+*.swo
+
+node_modules/
+coverage/
+
+**/*.bundle.js
