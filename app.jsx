@@ -13,11 +13,18 @@ import counterActionCreators from './actions/counter';
 import App from './components/App.jsx';
 import Foo from './components/Foo.jsx';
 import Bar from './components/Bar.jsx';
+import Box from './components/Box.jsx';
 
 const store = createStore(reducer);
 const history = createHistory();
 
 syncReduxAndRouter(history, store);
+
+console.log(store.getState());
+
+store.subscribe(() => {
+  console.log(store.getState());
+});
 
 render(
   <Provider store={store}>
@@ -30,7 +37,9 @@ render(
               state => ({number: state.counter.number}),
               counterActionCreators
             )(Foo)}
-          />
+          >
+            <Route path='box' component={Box} />
+          </Route>
 
           <Route path='bar' component={Bar} />
         </Route>
