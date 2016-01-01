@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {Router, Route} from 'react-router';
+import {Router, Route, useRouterHistory} from 'react-router';
 import createHistory from 'history/lib/createHashHistory';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
@@ -16,7 +16,7 @@ import Bar from './components/Bar.jsx';
 import Box from './components/Box.jsx';
 
 const store = createStore(reducer);
-const history = createHistory();
+const history = useRouterHistory(createHistory)();
 
 syncReduxAndRouter(history, store);
 

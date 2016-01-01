@@ -1,8 +1,12 @@
 {
   "name": "redux-routing-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple demo using Redux for state and routing.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calvinwoo/redux-routing-demo.git"
+  },
   "scripts": {
     "start": "webpack -w",
     "lint": "eslint . --ext .js,.jsx",
@@ -17,14 +21,14 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-2": "^6.3.13",
     "eslint": "^1.10.3",
-    "eslint-plugin-react": "^3.11.3",
-    "history": "^1.13.1",
+    "eslint-plugin-react": "^3.13.1",
+    "history": "^1.17.0",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.1",
-    "react-router": "^1.0.2",
+    "react-router": "^2.0.0-rc4",
     "redux": "^3.0.5",
-    "redux-simple-router": "^1.0.1",
+    "redux-simple-router": "^1.0.2",
     "webpack": "^1.12.9"
   }
 }
