@@ -11,8 +11,8 @@ import reducer from './reducers';
 import counterActionCreators from './actions/counter';
 
 import App from './components/App.jsx';
-import Foo from './components/Foo.jsx';
-import Bar from './components/Bar.jsx';
+import Count from './components/Count.jsx';
+import About from './components/About.jsx';
 import Box from './components/Box.jsx';
 
 const store = createStore(reducer);
@@ -32,16 +32,22 @@ render(
       <Router history={history}>
         <Route path='/' component={App}>
           <Route
-            path='foo'
+            path='count'
             component={connect(
               state => ({number: state.counter.number}),
               counterActionCreators
-            )(Foo)}
+            )(Count)}
           >
-            <Route path='box' component={Box} />
+            <Route
+              path='box'
+              component={connect(
+                state => ({number: state.counter.number}),
+                counterActionCreators
+              )(Box)}
+            />
           </Route>
 
-          <Route path='bar' component={Bar} />
+          <Route path='about' component={About} />
         </Route>
       </Router>
     </div>

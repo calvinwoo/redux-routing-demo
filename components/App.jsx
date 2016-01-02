@@ -3,16 +3,16 @@ import {Link} from 'react-router';
 
 const App = ({children}) => {
   return (
-    <div>
-      App
-      <header>
-        Links:
-        <Link to='/foo'>Foo</Link>
-        <Link to='/bar'>Bar</Link>
+    <div style={{padding: '20px 20px'}}>
+      <header style={{marginBottom: 30}}>
+        <h4>Table of Contents</h4>
+        <ul className='list-inline'>
+          <li><Link to='/count'>Count</Link></li>
+          <li><Link to='/about'>About</Link></li>
+        </ul>
       </header>
 
       <div>
-        Content
         {children}
       </div>
     </div>
