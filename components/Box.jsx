@@ -19,7 +19,7 @@ export default class Box extends Component {
     return (
       <div style={{border: '3px black solid', padding: 10}}>
         <div className='pull-right'>
-          <Link to={this.props.location.query.source}>X to Close</Link>
+          <Link to={`/${this.props.location.query.source}`}>X to Close</Link>
         </div>
 
         <h3>Custom Add Box</h3>

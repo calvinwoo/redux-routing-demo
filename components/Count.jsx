@@ -20,7 +20,7 @@ export default ({number, increase, decrease, children}) => {
       </div>
 
       <div>
-        <Link to='count/box?source=count'>Show Box</Link>
+        <Link to='/count/box?source=count'>Show Box</Link>
       </div>
 
       {children}

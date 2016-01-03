@@ -8,7 +8,7 @@
     "url": "https://github.com/calvinwoo/redux-routing-demo.git"
   },
   "scripts": {
-    "start": "webpack -w",
+    "start": "nodemon server-babel.js -e js,jsx --ignore '**/*.bundle.js' & webpack -w",
     "lint": "eslint . --ext .js,.jsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +23,7 @@
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.13.1",
     "history": "^1.17.0",
+    "nodemon": "^1.8.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.1",
@@ -30,5 +31,10 @@
     "redux": "^3.0.5",
     "redux-simple-router": "^1.0.2",
     "webpack": "^1.12.9"
+  },
+  "dependencies": {
+    "babel-register": "^6.3.13",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3"
   }
 }
