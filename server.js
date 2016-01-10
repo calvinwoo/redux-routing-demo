@@ -1,12 +1,14 @@
 import http from 'http';
 import express from 'express';
 import bodyParser from 'body-parser';
+import favicon from 'serve-favicon';
 import routes from './routes';
 
 const app = express();
 app.set('title', 'Demo');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.use('/public', express.static(__dirname + '/public'));
 app.use('/', routes);
