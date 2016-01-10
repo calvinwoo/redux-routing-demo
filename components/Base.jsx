@@ -29,7 +29,7 @@ const Base = ({markup, initialData}) => {
       <body>
         {renderInitialData()}
         {renderReactApp()}
-        <script src='public/bundle/app.bundle.js'></script>
+        <script src='/public/bundle/app.bundle.js'></script>
       </body>
     </html>
   );
