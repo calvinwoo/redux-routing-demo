@@ -25,7 +25,10 @@ export default class Box extends Component {
         <h3>Custom Add Box</h3>
 
         <div>
-          <input onChange={event => this.setState({amount: event.target.value})} />
+          <input
+            onChange={event => this.setState({amount: event.target.value})}
+            placeholder='Enter a number'
+          />
           <button onClick={() => this.props.increase(this.state.amount)}>
             Add
           </button>
