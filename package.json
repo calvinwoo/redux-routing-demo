@@ -10,7 +10,8 @@
   "scripts": {
     "start": "nodemon server-babel.js -e js,jsx --ignore '**/*.bundle.js' & webpack -w",
     "lint": "eslint . --ext .js,.jsx",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "launch": "webpack && node server-babel.js"
   },
   "author": "Calvin Woo <calvinwoo32@gmail.com> (http://calvinwoo.com)",
   "license": "ISC",
